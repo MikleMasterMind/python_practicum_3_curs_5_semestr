@@ -1,0 +1,2 @@
+from itertools import takewhile
+print(max(takewhile(lambda x: x % 11111, nonprime(1000))))

@@ -1,0 +1,15 @@
+async def main(*specs):
+    monsters = [Monster(*spec) for spec in specs]
+    animate, freeze = asyncio.Barrier(len(monsters) + 1), asyncio.Barrier(len(monsters) + 1)
+    squad = [asyncio.create_task(m.run(animate, freeze)) for m in monsters]
+    result = await game(monsters, animate, freeze, 1000)
+    _ = [m.cancel() for m in squad]
+    return result
+
+
+from random import randint, seed
+seed(1337)
+N, M = 20, 100
+squad = [(f"({i})", 1+i*2, randint(1, 6), randint(1, M)) for i in range(N)]
+squad[0] = "Killer", 1, 1, N*M
+print(asyncio.run(main(*squad)))

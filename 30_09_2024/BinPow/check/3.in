@@ -1,0 +1,2 @@
+data = ([1, 2, 3], 2, list.__add__)
+print(BinPow(*data))

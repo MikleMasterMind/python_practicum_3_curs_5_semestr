@@ -1,0 +1,2 @@
+data = 33
+print(divdigit(data))

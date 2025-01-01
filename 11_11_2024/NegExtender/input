@@ -1,0 +1,15 @@
+class C:
+    def __init__(self, val=""):
+        self.val = f"<[{val}]>"
+    def __str__(self):
+        return self.val
+    def __getitem__(self, idx):
+        return self.val.__getitem__(idx)
+
+class E(C):
+    pass
+
+class D(NegExt, E):
+    pass
+
+print(-D(), --D(), -D("QwerT"), --D("QwerT"))

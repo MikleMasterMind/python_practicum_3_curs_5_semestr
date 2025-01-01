@@ -1,0 +1,7 @@
+class C:
+    import random
+    input(str(random.random()))
+
+
+
+

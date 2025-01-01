@@ -1,0 +1,4 @@
+M = 10001
+for i in range(M):
+    lst = Pairs(2), Pairs(3)
+print(lst[0].e + lst[1].u)

@@ -1,0 +1,3 @@
+print(++-~-+-+~-morse("Boo Boo Boo Boo"))
+print(++-~-+-+~-morse("Boo Boo Boo "))
+print(++-~-+-+~-morse("Boo Boo Boo"))

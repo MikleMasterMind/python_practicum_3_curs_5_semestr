@@ -1,0 +1,2 @@
+data = (5, 1000000 - 1, lambda x, y: x+y)
+print(BinPow(*data))

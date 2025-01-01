@@ -1,0 +1,7 @@
+#!/bin/bash
+
+for i in 1 2 3 4 5 6 7 8 9
+do
+python3 ArbTangent.py < check/$i.in > check/$i.out
+diff -q -Z check/$i.out check/$i.check
+done

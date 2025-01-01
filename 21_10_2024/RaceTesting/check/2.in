@@ -1,0 +1,9 @@
+from itertools import islice, chain, count
+from random import randint, choices, seed
+
+seed(887)
+path = islice((randint(1, 5) for i in count()), 40)
+stops = choices(range(1, 3), k=3)
+times = islice((randint(1, 4) for i in count()), 40)
+
+print(*speed(path, stops, times))

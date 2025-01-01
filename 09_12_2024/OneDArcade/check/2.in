@@ -1,0 +1,12 @@
+async def main(*specs):
+    monsters = [Monster(*spec) for spec in specs]
+    animate, freeze = asyncio.Barrier(len(monsters) + 1), asyncio.Barrier(len(monsters) + 1)
+    squad = [asyncio.create_task(m.run(animate, freeze)) for m in monsters]
+    result = await game(monsters, animate, freeze, 1000)
+    _ = [m.cancel() for m in squad]
+    return result
+
+
+N, A = 5, 6
+squad = [(f":{i}:", i*2+1, i+1, A+2**(N-i)) for i in range(N)]
+print(asyncio.run(main(*squad)))

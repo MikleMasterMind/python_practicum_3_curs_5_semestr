@@ -1,0 +1,5 @@
+
+from math import *
+f, g = superposition(abs, (sin, cos))
+print(f(-1), g(-1), f(2), g(2))
+

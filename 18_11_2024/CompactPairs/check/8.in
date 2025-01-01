@@ -1,0 +1,2 @@
+N = 40000
+print(max(str(Pairs(1 + i % 26)) for i in range(N)))

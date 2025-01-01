@@ -1,0 +1,1 @@
+print(*dict(zip(nonprime(16), range(20))))

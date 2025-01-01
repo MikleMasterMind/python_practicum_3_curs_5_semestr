@@ -1,0 +1,4 @@
+N = 20
+x, a, c, m = 7, 1366, 1283, 6075 
+sign = "".join("++--~"[(x:=(a*x+c)%m)//2%5] for i in range(N))
+print(eval(f"{sign}morse('__')"))

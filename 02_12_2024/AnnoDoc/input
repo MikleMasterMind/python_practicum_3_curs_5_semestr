@@ -1,0 +1,7 @@
+class C(metaclass=AnnoDoc):
+    a: "A variable" = 42
+    b: "Undefiled field"
+    с: int = 100500 
+
+print(C.__doc__)
+print(C.__annotations__)

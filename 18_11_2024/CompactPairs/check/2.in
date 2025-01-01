@@ -1,0 +1,6 @@
+p = Pairs(1)
+pp = Pairs(2)
+ppp = Pairs(2)
+ppp = Pairs(26)
+print(p.a, p.z, pp.a, pp.z, ppp.a, ppp.z)
+print(p, pp, ppp, sep="\n")

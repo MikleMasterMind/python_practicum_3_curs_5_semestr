@@ -1,0 +1,9 @@
+class Nabal: pass
+class Sienese: pass
+class ganey: pass
+class erasures: pass
+class Faeroe(ganey, Sienese): pass
+class OOUI(erasures, Faeroe): pass
+class partakes(OOUI, erasures, Faeroe): pass
+
+

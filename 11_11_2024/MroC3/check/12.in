@@ -1,0 +1,5 @@
+S = list(range(100000000000))
+class C:
+	S = list(range(100000000000))
+
+

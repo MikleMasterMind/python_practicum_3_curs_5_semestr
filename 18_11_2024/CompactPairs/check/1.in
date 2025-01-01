@@ -1,0 +1,2 @@
+p = Pairs(12)
+print(p, p.b, p.y)

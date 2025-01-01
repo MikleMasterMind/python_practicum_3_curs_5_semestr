@@ -1,0 +1,6 @@
+x, a, c, m = 3, 1366, 1283, 6075 
+robo = turtle((0, 0), 0)
+next(robo)
+for cmd in ("ffflr"[(x:=(a*x+c)%m)//2%5] for i in range(200)):
+    res = robo.send(cmd)
+print(res)

@@ -1,0 +1,7 @@
+import time
+time.sleep(10)
+class C:
+	import time
+	time.sleep(10)
+
+

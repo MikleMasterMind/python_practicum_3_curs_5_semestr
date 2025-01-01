@@ -1,0 +1,6 @@
+#!/bin/bash
+for i in 1 2 3 4 5 6 7 8
+do
+python3 DahDit.py < check/$i.in > check/$i.out
+diff check/$i.out check/$i.check -q -Z
+done

@@ -1,0 +1,17 @@
+async def putter(n, queue):
+    for i in range(n):
+        await queue.put(i)
+
+async def getter(n, queue, filter):
+    res = 0
+    for i in range(n):
+        await asyncio.sleep(0)
+        res += (i % 7 - 3) * await queue.get(filter)
+    return res
+
+async def main():
+    queue = FilterQueue()
+    res = await asyncio.gather(putter(200, queue), getter(200, queue, lambda n: n % 2))
+    print(res[1])
+
+asyncio.run(main())

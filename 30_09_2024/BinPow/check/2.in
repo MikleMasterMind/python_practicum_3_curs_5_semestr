@@ -1,0 +1,2 @@
+data = ("Se", 7, str.__add__)
+print(BinPow(*data))
